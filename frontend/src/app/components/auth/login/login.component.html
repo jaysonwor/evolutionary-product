@@ -9,30 +9,42 @@
 
     <div style="padding: 16px;">
         <div fxLayout="row wrap" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutAlign="space-around center" fxLayoutGap="50px">          
-            <mat-form-field fxFlex="calc(50%-30px)" >              
-                    <mat-label>Username</mat-label>   
-                    <input type="text" matInput formControlName="username" >
-                    <mat-hint>email or username</mat-hint>
-                    <mat-error *ngIf="f.username.errors && f.username.errors.required">Username is required</mat-error>
-            </mat-form-field>          
-            <mat-form-field fxFlex="calc(50%-30px)">
-                <mat-label>Password</mat-label>
-                <input type="password" matInput formControlName="password">
-                <mat-error *ngIf="f.password.errors && f.password.errors.required">Password is required</mat-error>
-            </mat-form-field>
+            <div>
+              <mat-icon style="vertical-align: middle;">mail_outline</mat-icon>
+              <mat-form-field>              
+                      <mat-label>Username</mat-label>                      
+                      <input type="text" matInput formControlName="username" >
+                      <mat-hint>email or username</mat-hint>
+                      <mat-error *ngIf="f.username.errors && f.username.errors.required">Username is required</mat-error>
+              </mat-form-field>       
+            </div>   
+            <div>
+              <mat-icon style="vertical-align: middle;">lock_outline</mat-icon>
+              <mat-form-field>
+                  <mat-label>Password</mat-label>
+                  <input type="password" matInput formControlName="password">
+                  <mat-error *ngIf="f.password.errors && f.password.errors.required">Password is required</mat-error>
+              </mat-form-field>
+            </div>
         </div>
     </div>
     
-    <mat-toolbar fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="16px" style="padding: 16px;">
+    <mat-toolbar fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="16px">
         <button type="submit" mat-raised-button color="primary" [disabled]="!form.valid || isSubmitting"> 
-            <mat-spinner diameter="40" strokeWidth='5' *ngIf="isSubmitting"></mat-spinner>
+            <mat-progress-bar mode="indeterminate" *ngIf="isSubmitting"></mat-progress-bar>
             <span *ngIf="!isSubmitting">Login</span>
         </button>
+        
     </mat-toolbar>
 
   </form>
 
+  <div fxLayout="row wrap" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutAlign="none none">            
+          <button mat-button [routerLink]="['/signup']" fxFlex="calc(30%-30px)">Signup</button>    
+          <button mat-button [routerLink]="['/signup']" fxFlex="calc(30%-30px)">Forgot password?</button>       
+  </div>
+
   </mat-card-content>
-  <mat-card-actions>
-  </mat-card-actions>
+
+   
 </mat-card>
