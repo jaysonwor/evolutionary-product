@@ -1,0 +1,77 @@
+<mat-card style="padding: 0px">
+  <mat-card-content>
+   
+  <mat-toolbar color="primary">
+    <span>New Account Signup</span>
+  </mat-toolbar>
+
+  <form [formGroup]="form" (ngSubmit)="signup()">  
+
+    <div style="padding: 16px;" fxLayout="row wrap" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutAlign="none none" fxLayoutGap="5vh">
+        <div>          
+            <div>
+              <mat-icon style="vertical-align: middle;">person_pin_outline</mat-icon>
+              <mat-form-field>              
+                <mat-label>First Name</mat-label>                      
+                <input type="text" matInput formControlName="firstName" >
+                <mat-error *ngIf="f.firstName.errors && f.firstName.errors.required">first name is required</mat-error>
+              </mat-form-field>       
+            </div>   
+            <div>
+              <mat-icon style="vertical-align: middle;">person_pin_outline</mat-icon>
+              <mat-form-field>              
+                <mat-label>Last Name</mat-label>                      
+                <input type="text" matInput formControlName="lastName" >
+                <mat-error *ngIf="f.lastName.errors && f.lastName.errors.required">last name is required</mat-error>
+              </mat-form-field>       
+            </div> 
+        </div>
+        <div>          
+            <div>
+              <mat-icon style="vertical-align: middle;">mail_outline</mat-icon>
+              <mat-form-field>              
+                <mat-label>Email</mat-label>                      
+                <input type="text" matInput formControlName="email" >
+                <mat-hint>email or username</mat-hint>
+                <mat-error *ngIf="f.email.errors && f.email.errors.required">email is required</mat-error>
+              </mat-form-field>       
+            </div>  
+        </div>
+        <div>          
+            <div>
+              <mat-icon style="vertical-align: middle;">lock_outline</mat-icon>
+              <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password">
+                <mat-error *ngIf="f.password.errors && f.password.errors.required">password is required</mat-error>
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-icon style="vertical-align: middle;">lock_outline</mat-icon>
+              <mat-form-field>
+                <mat-label>Confirm Password</mat-label>
+                <input type="password" matInput formControlName="confirmPassword">
+                <mat-error *ngIf="f.confirmPassword.errors && f.confirmPassword.errors.required">confirm password is required</mat-error>
+              </mat-form-field>
+            </div>
+        </div>
+    </div>
+    
+    <mat-toolbar fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="16px">
+        <button type="submit" mat-raised-button color="primary" [disabled]="!form.valid || isSubmitting"> 
+            <mat-progress-bar mode="indeterminate" *ngIf="isSubmitting"></mat-progress-bar>
+            <span *ngIf="!isSubmitting">Signup</span>
+        </button>
+        
+    </mat-toolbar>
+
+  </form>
+
+  <div fxLayout="row wrap" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutAlign="none none">            
+    <button mat-button [routerLink]="['/auth/login']" fxFlex="calc(30%-30px)">Already signed up?</button>    
+  </div>
+
+  </mat-card-content>
+
+   
+</mat-card>

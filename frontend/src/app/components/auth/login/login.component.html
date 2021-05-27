@@ -15,7 +15,7 @@
                       <mat-label>Username</mat-label>                      
                       <input type="text" matInput formControlName="username" >
                       <mat-hint>email or username</mat-hint>
-                      <mat-error *ngIf="f.username.errors && f.username.errors.required">Username is required</mat-error>
+                      <mat-error *ngIf="f.username.errors && f.username.errors.required">username is required</mat-error>
               </mat-form-field>       
             </div>   
             <div>
@@ -23,7 +23,7 @@
               <mat-form-field>
                   <mat-label>Password</mat-label>
                   <input type="password" matInput formControlName="password">
-                  <mat-error *ngIf="f.password.errors && f.password.errors.required">Password is required</mat-error>
+                  <mat-error *ngIf="f.password.errors && f.password.errors.required">password is required</mat-error>
               </mat-form-field>
             </div>
         </div>
@@ -40,7 +40,7 @@
   </form>
 
   <div fxLayout="row wrap" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutAlign="none none">            
-          <button mat-button [routerLink]="['/signup']" fxFlex="calc(30%-30px)">Signup</button>    
+          <button mat-button [routerLink]="['/auth/signup']" fxFlex="calc(30%-30px)">Signup</button>    
           <button mat-button [routerLink]="['/signup']" fxFlex="calc(30%-30px)">Forgot password?</button>       
   </div>
 
