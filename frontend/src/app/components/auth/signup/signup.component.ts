@@ -11,6 +11,7 @@ export class SignupComponent implements OnInit {
 
   form: any;
   isSubmitting: boolean = false;
+  hide = true;
 
   constructor ( 
     private formBuilder: FormBuilder
