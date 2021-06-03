@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ConfirmedValidator } from 'src/app/validators/confirmed';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.scss']
-})
+}) 
 export class SignupComponent implements OnInit {
 
   form: any;
   isSubmitting: boolean = false;
 
-  constructor(
+  constructor ( 
     private formBuilder: FormBuilder
 
   ) { }
@@ -24,9 +25,10 @@ export class SignupComponent implements OnInit {
     this.form = this.formBuilder.group({
       email: ["", Validators.required],
       password: ["", Validators.required],
+      name: ["", Validators.required],
       confirmPassword: ["", Validators.required],
-      firstName: ["", Validators.required],
-      lastName: ["", Validators.required]
+    }, {
+      validator: ConfirmedValidator('password', 'confirmPassword')
     })
   }
 
@@ -35,6 +37,7 @@ export class SignupComponent implements OnInit {
   signup() {
     console.log("SignupComponent.login")
     this.isSubmitting = true;
+    console.log(this.form.value)
     //todo add api call
     // this.isSubmitting = false;
   }
