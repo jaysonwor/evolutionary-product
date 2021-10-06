@@ -1,5 +1,5 @@
 ## Background
-I've begun to think that technical skills must be honed every so often, otherwise, you will lose them over time. I find this especially true as I get older. Furthermore, although technology is constantly evolving I have been able to identify commonalities over my tenure that stand the test of time. Therefore, I am going to create a product, I am not quite sure what this product is yet but I anticipate that it will be used to help derive other products in the future. Finally, I welcome any other contributors on this product as learning from others is truly the best way to hone your skills.
+Technical skills must be honed every so often, otherwise, you will lose them over time. I find this especially true as I get older. Furthermore, although technology is constantly evolving I have been able to identify commonalities over my tenure that stand the test of time. Therefore, I am going to create a product, I am not quite sure what this product is yet but I anticipate that it will be used to help derive other products in the future. Finally, I welcome any other contributors on this product as learning from others is truly the best way to hone your skills.
 
 ## Contributors
 I welcome anyone who wishes to contribute on this as long as some simple guiding principles are followed (to ensure whatever is built is also cohesive)
