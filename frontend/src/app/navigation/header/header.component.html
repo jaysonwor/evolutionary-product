@@ -1,0 +1,26 @@
+<ion-header>
+  <mat-toolbar color="primary">
+    <div>
+      <a routerLink="/home">Owner-Account</a>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+      <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+        <li>
+          <a routerLink="/owner">Owner Actions</a>
+        </li>
+        <li>
+          <a routerLink="/account">Account Actions</a>
+        </li>
+      </ul>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.gt-xs>
+      <!-- <button mat-icon-button (click)="onToggleSidenav()">
+        <mat-icon>menu</mat-icon>
+      </button> -->
+      <ion-buttons slot="start">
+        <ion-menu-button autoHide="false"></ion-menu-button>
+      </ion-buttons>
+    </div>
+
+  </mat-toolbar>
+</ion-header>
