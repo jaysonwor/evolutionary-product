@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { StateService } from '../services/state.service';
 
 @Component({
   selector: 'app-home',
@@ -9,11 +8,9 @@ import { StateService } from '../services/state.service';
 export class HomePage implements OnInit {
 
   constructor(
-    private stateService: StateService
   ) { }
 
   ngOnInit() {
-    // this.stateService.setNavbarState(false);
   }
 
 }

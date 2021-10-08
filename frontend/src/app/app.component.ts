@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { StateService } from './services/state.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +8,6 @@ import { StateService } from './services/state.service';
 export class AppComponent {
 
   constructor(
-    private stateService: StateService
   ) {
   }
 }
