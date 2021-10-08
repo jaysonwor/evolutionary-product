@@ -19,6 +19,6 @@ import { LayoutComponent } from '../layout/layout.component';
     MaterialAppModule,
     FlexLayoutModule
   ],
-  declarations: [HomePage, HeaderComponent, SidenavComponent, LayoutComponent]
+  declarations: [HomePage, HeaderComponent, LayoutComponent]
 })
 export class HomePageModule {}

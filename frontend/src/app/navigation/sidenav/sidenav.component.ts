@@ -8,15 +8,9 @@ import { Router, RouterEvent } from '@angular/router';
 })
 export class SidenavComponent implements OnInit {
 
-  @Output() sidenavClose = new EventEmitter();
- 
   constructor() { }
- 
+
   ngOnInit() {
-  }
- 
-  public onSidenavClose = () => {
-    this.sidenavClose.emit();
   }
 
 }
